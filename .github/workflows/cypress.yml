@@ -10,7 +10,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v4
-        with:
-          start: yarn start
-          run: yarn run cypress:open
-          browser: chrome
+      - run: yarn install
+      - run: yarn start
+      - run: yarn run cypress:open
