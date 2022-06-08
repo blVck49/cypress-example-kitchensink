@@ -11,6 +11,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          start: yarn start
+          install: yarn install vite
+          start: yarn run vite
           run: yarn run cypress:open
           browser: chrome
